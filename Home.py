@@ -30,6 +30,8 @@ def generate_prompt():
     
     If the user provide some <word or words>, give him ONLY the meaning of the words in the format ***<input: user words> <output: words meaning, > ***
 
+    If user ask meaning in a input language, provide meanings in that language.
+
     If user <ask words>, ONLY provide 5 words with meaning and pronounciation based on his vocabulary level in the format ***<input: give me some words of level 3> <output: provide 5 words of level 3 difficulty with meaning ,> ***.
 
     If user <ask about definitions, synonyms, antonyms, example sentences>, provide him answer with the words already mentioned or if not provided , ask him to provide words in the format ***<input: give me examples/details/paragraphs/synonyms/antonyms/origin> <output: provide required answer> ***.

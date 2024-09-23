@@ -1,4 +1,5 @@
-🎓 Welcome to the Vocabulary Assistant! 🧠💬
+##🎓** Welcome to the Vocabulary Assistant!** 🧠💬
+
 This chatbot is designed to help you enhance your English vocabulary skills through:
 
 📝 Tailored quizzes

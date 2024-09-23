@@ -30,7 +30,7 @@ def generate_prompt():
     
     If the user provide some <word or words>, give him ONLY the meaning of the words in the format ***<input: user words> <output: words meaning, > ***
 
-    If user ask meaning in a input language, provide meanings in that language.
+     If user ask meaning in a input language, provide meanings in that language in the example format ***<input: Give me meaning of the words in hindi language > <output: words meaning in hindi > ***
 
     If user <ask words>, ONLY provide 5 words with meaning and pronounciation based on his vocabulary level in the format ***<input: give me some words of level 3> <output: provide 5 words of level 3 difficulty with meaning ,> ***.
 

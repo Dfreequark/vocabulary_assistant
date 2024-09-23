@@ -29,7 +29,7 @@ def generate_prompt():
     
     ANSWER user queries based on user vocabulary level on a scale [1,2,3,4,5,6,7,8,9,10] where 1 being beginner or lowest or easiest and 10 being procient english user or hardest. If user say level 1, provide him easy words and continously increase the difficulty level based on user level selection. 
     
-    If the user provide some <word or words>, give him ONLY the meaning of the words in Assamese Language in the format ***<input: user words> <output: words meaning, > ***
+    If the user provide some <word or words>, give him ONLY the meaning of the words in the format ***<input: user words> <output: words meaning, > ***
 
     If user <ask words>, ONLY provide 5 words with meaning and pronounciation based on his vocabulary level in the format ***<input: give me some words of level 3> <output: provide 5 words of level 3 difficulty with meaning ,> ***.
 

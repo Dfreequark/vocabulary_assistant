@@ -6,8 +6,7 @@ from streaming import StreamHandler
 from langchain.chains import ConversationChain
 from langchain.memory import ConversationBufferMemory
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
-from langchain_core.output_parsers import StrOutputParser
-from langchain.schema import ChatMessage
+
 
 st.set_page_config(page_title="Vocabulary Assistant", page_icon="🤖")
 st.header('Vocabulary Assistant chatbot')
@@ -65,8 +64,6 @@ def generate_prompt():
             
         ]
     )
-
-    # prompt = prompt.format_messages(level =user_level)
     return prompt
 
 class ContextChatbot:
@@ -158,7 +155,7 @@ class ContextChatbot:
                 
                 response = result["response"]
                 st.session_state.messages.append({"role": "assistant", "content": response})
-                # st.markdown(response)
+
 
                 
 

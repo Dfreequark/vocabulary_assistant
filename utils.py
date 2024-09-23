@@ -3,9 +3,7 @@ import streamlit as st
 from datetime import datetime
 from streamlit.logger import get_logger
 from langchain_cohere import ChatCohere
-from langchain_community.chat_models import ChatOllama
-from langchain_community.embeddings.fastembed import FastEmbedEmbeddings
-from langchain.schema import ChatMessage
+
 
 
 logger = get_logger('Langchain-Chatbot')
@@ -14,17 +12,15 @@ logger = get_logger('Langchain-Chatbot')
 
 os.environ["LANGCHAIN_API_KEY"]= st.secrets["LANGCHAIN_API_KEY"]
 os.environ["COHERE_API_KEY"]= st.secrets["COHERE_API_KEY"]
-os.environ["GROQ_API_KEY"]= st.secrets["GROQ_API_KEY"]
 os.environ["LANGCHAIN_TRACING_V2"]="false"
 
 def my_api_key():
     return st.secrets["COHERE_API_KEY"]
-    # return st.secrets["GROQ_API_KEY"]
 
 
 #decorator
 def enable_chat_history(func):
-    # if os.environ.get("OPENAI_API_KEY"):
+
     if os.environ["COHERE_API_KEY"]:
 
         # to clear chat history after swtching chatbot
@@ -41,11 +37,8 @@ def enable_chat_history(func):
 
         # # to show chat history on ui
         if "messages" not in st.session_state:
-            # st.session_state["messages"] = [ChatMessage(role="assistant", content="How can I assist you to improve your vocabulary?")]
             st.session_state["messages"] = [{"role": "assistant", "content": "Provide me words or To learn new words, Press 'Words'!"}]
-            # st.chat_message("assistant").write("How can I assist you to improve your vocabulary?")
 
-       
         for msg in st.session_state["messages"]:
             st.chat_message(msg["role"]).write(msg["content"])
 

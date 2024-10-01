@@ -2,5 +2,5 @@ langchain==0.2.9
 langchainhub==0.1.20
 langchain-community==0.2.6
 langchain_core==0.2.21
-langchain-cohere==0.3.0
+langchain-cohere==0.1.18
 streamlit==1.37.1
